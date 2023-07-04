@@ -48,7 +48,7 @@ if(isset($_POST['update'])){
    $thumb_folder = '../uploaded_files/'.$rename_thumb;
 
    if(!empty($thumb)){
-      if($thumb_size > 2000000){
+      if($thumb_size > 20000000){
          $message[] = 'image size is too large!';
       }else{
          $update_thumb = $conn->prepare("UPDATE `content` SET thumb = ? WHERE id = ?");
